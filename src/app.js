@@ -15,8 +15,26 @@ botonTimer.addEventListener("click", () => {
   setInterval(obtenerCarta, 5000);
 });
 
-function obtenerCarta() {
+let botonApply = document.getElementById("botonApply");
+botonApply.addEventListener("click", function() {
+  let inputHeigth = document.getElementById("heightCardAmount").value;
+  let inputWidth = document.getElementById("widthCardAmount").value;
   let elemCard = document.getElementById("card");
+  elemCard.style.height = inputHeigth + "px";
+  elemCard.style.width = inputWidth + "px";
+  let elemCardNumber = document.getElementById("cardNumber");
+  elemCardNumber.style.fontSize =
+    (parseInt(inputHeigth) + 100).toString() + "%";
+
+  let elemsPalo = document.querySelectorAll(".palo");
+  elemsPalo.forEach(valor => {
+    valor.style.fontSize = (parseInt(inputHeigth) / 3).toString() + "%";
+    console.log(valor.style.fontSize);
+  });
+});
+
+function obtenerCarta() {
+  let elemCard = document.getElementById("cardNumber");
   let numeroCarta = Math.floor(Math.random() * 13) + 1;
   switch (numeroCarta) {
     case 1:

@@ -17,9 +17,9 @@
     />
   </head>
   <body>
-    <div class="container my-5 bg-success">
+    <div class="container my-5 bg-success bg-gradient">
       <div class="row py-5">
-        <div class="col-auto ps-5 pt-3">
+        <div class="col-auto ps-md-5 pt-3" style="margin-right: 20%;">
           <button
             type="button"
             class="btn btn-warning d-block"
@@ -34,34 +34,47 @@
           >
             <i class="bi bi-stopwatch"></i>
           </button>
-          <label for="heightCard">height of your card</label>
-          <input
-            class="d-block mt-2"
-            type="number"
-            id="heightCard"
-            style="width: 75%;"
-            min="150"
-            max="1500"
-          />
-          <label for="heightCard">width of your card</label>
-          <input
-            class="d-block mt-2"
-            type="number"
-            style="width: 75%;"
-            min="100"
-            max="900"
-          />
+          <div
+            class="medidas border rounded-3 bg-success mt-2 p-2 align-items-center"
+          >
+            <label for="heightCard" id="heightCard">height of your card</label>
+            <input
+              class="d-block mt-2"
+              type="number"
+              id="heightCardAmount"
+              style="width: 75%;"
+              min="150"
+              max="1500"
+            />
+            <label for="heightCard">width of your card</label>
+            <input
+              class="d-block mt-2"
+              type="number"
+              style="width: 75%;"
+              min="100"
+              max="900"
+              id="widthCardAmount"
+            />
+            <button
+              type="button"
+              class="btn btn-secondary mt-2"
+              id="botonApply"
+            >
+              Apply
+            </button>
+          </div>
         </div>
 
         <div
           class="border border-black d-flex bg-light"
           style="border-radius: 1.5em; height: 500px; width: 300px;"
+          id="card"
         >
           <div class="align-self-start me-auto my-3" style="font-size: 400%;">
             <p class="palo m-0">?</p>
           </div>
           <div class="align-self-center">
-            <h1 id="card" style="font-size: 700%;">?</h1>
+            <h1 id="cardNumber" style="font-size: 700%;">?</h1>
           </div>
           <div class="align-self-end ms-auto my-3" style="font-size: 400%;">
             <p class="palo m-0">?</p>
