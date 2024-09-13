@@ -1,5 +1,13 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 
-#carta {
-  border-radius: 5px;
+@media (min-width: 768px) {
+  .contenedorEventos {
+    margin-right: 20%;
+  }
+}
+
+span {
+  font-style: italic;
+  font-size: smaller;
+  margin-bottom: 0;
 }
